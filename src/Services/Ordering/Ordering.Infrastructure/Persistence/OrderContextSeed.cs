@@ -19,7 +19,7 @@ namespace Ordering.Infrastructure.Persistence
         {
             return new List<Order>
             {
-                new Order() {UserName = "Hawk", FirstName = "Nick", LastName = "Bitounis", EmailAddress = "nikosmp1995@hotmail.com", AddressLine = "Moon", Country = "Milkyway", TotalPrice = 350 }
+                new Order() {UserName = "Hawk", FirstName = "Nick", LastName = "Bitounis", EmailAddress = "nikosmp1995@hotmail.com", AddressLine = "Moon", Country = "Milkyway", TotalPrice = 350, State = "Greece", ZipCode = "16343" }
             };
         }
     }

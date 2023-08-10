@@ -19,7 +19,7 @@ namespace Ordering.API.Extensions
 
                 try
                 {
-                    logger.LogInformation("Migrating database associated with context {DbContextNAme}", typeof(TContext).Name);
+                    logger.LogInformation("Migrating database associated with context {DbContextName}", typeof(TContext).Name);
 
                     InvokeSeeder(seeder, context, services);
 
