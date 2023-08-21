@@ -9,7 +9,7 @@
     }
   },
   "profiles": {
-    "DIscount.API": {
+    "Discount.API": {
       "commandName": "Project",
       "launchBrowser": true,
       "launchUrl": "swagger",
