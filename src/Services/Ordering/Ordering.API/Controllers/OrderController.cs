@@ -40,6 +40,7 @@ namespace Ordering.API.Controllers
         [HttpPut(Name = "UpdateOrder")]
         [ProducesResponseType((int)HttpStatusCode.NoContent)]
         [ProducesResponseType((int)HttpStatusCode.NotFound)]
+        [ProducesDefaultResponseType]
         public async Task<ActionResult> UpdateOrder([FromBody] UpdateOrderCommand command)
         {
             await _mediator.Send(command);
@@ -49,6 +50,7 @@ namespace Ordering.API.Controllers
         [HttpDelete("{id}", Name = "DeleteOrder")]
         [ProducesResponseType((int)HttpStatusCode.NoContent)]
         [ProducesResponseType((int)HttpStatusCode.NotFound)]
+        [ProducesDefaultResponseType]
         public async Task<ActionResult> DeleteOrder(int id)
         {
             var command = new DeleteOrderCommand() { Id = id };

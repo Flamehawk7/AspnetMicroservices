@@ -23,14 +23,12 @@ builder.Services.AddStackExchangeRedisCache(options => options.Configuration = b
 
 //General Configuration
 builder.Services.AddScoped<IBasketRepository, BasketRepository>();
-
-builder.Services.AddScoped<DiscountGrpcService>();
-
 builder.Services.AddAutoMapper(typeof(Program));
 
 //Grpc Configuration
 builder.Services.AddGrpcClient<DiscountProtoService.DiscountProtoServiceClient>
     (o => o.Address = new Uri(builder.Configuration.GetValue<string>("GrpcSettings:DiscountUrl")));
+builder.Services.AddScoped<DiscountGrpcService>();
 
 // MassTransit-RabbitMQ Configuration
 builder.Services.AddMassTransit(config =>

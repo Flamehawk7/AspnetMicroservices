@@ -12,6 +12,8 @@ var builder = WebApplication.CreateBuilder(args);
 builder.Services.ApplicationServices();
 builder.Services.AddInsfrastuctureServices(builder.Configuration);
 
+
+
 // MassTransit-RabbitMQ Configuration
 builder.Services.AddMassTransit(config =>
 {
@@ -28,6 +30,10 @@ builder.Services.AddMassTransit(config =>
         });
     });
 });
+
+// General Configuration
+builder.Services.AddAutoMapper(typeof(Program));
+builder.Services.AddScoped<BasketCheckoutConsumer>();
 
 builder.Services.AddControllers();
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
