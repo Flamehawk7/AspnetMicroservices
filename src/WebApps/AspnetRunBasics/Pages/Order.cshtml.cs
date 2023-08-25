@@ -12,9 +12,9 @@ namespace AspnetRunBasics
     {
         private readonly IOrderService _orderService;
 
-        public OrderModel(IOrderService _orderService)
+        public OrderModel(IOrderService orderService)
         {
-            _orderService = _orderService ?? throw new ArgumentNullException(nameof(_orderService));
+            _orderService = orderService ?? throw new ArgumentNullException(nameof(orderService));
         }
 
         public IEnumerable<OrderResponseModel> Orders { get; set; } = new List<OrderResponseModel>();
