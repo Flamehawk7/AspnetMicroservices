@@ -1,4 +1,4 @@
-# Microservices Architecture and Implementation on .NET 5
+# .NET 8 Microservices: DDD, CQRS, Vertical/Clean Architecture
 
 The complete project i made while following the Udemy course:
 
